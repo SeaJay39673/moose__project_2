@@ -1,0 +1,6 @@
+Applications:
+    moose__project_2:
+        app_types:
+            - moose__project_2App
+        content_directory: ${ROOT_DIR}/doc/content
+        log_default: WARNING
