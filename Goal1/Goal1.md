@@ -28,5 +28,5 @@
 
 #### Goals/TODO:
 * Research viewing data and mesh in ParaView.
-* If ParaView not a problem with ParaView, ensure that input file is correct and calculations are running fine.
+* If not a problem with ParaView, ensure that input file is correct and calculations are running fine.
 * Copy Goal1.i input file and rewrite it for a transient execution type to meet goal requirements.
