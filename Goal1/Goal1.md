@@ -1,7 +1,32 @@
 # Description
     The aim of this goal is to simulate a rectangular steel plate under thermal loading.
-    These results will be processed and visualized in Paraview and checked against supplemental calculations to ensure validity. 
+    These results will be processed and visualized in ParaView and checked against supplemental calculations to ensure validity. 
 
 # Problem Statement:
-    There is a 4x10x.25 inch 316L steel metal plate. The bottom of the plate is heated to 200F. Simulate and process the results.
+    There is a 4x10x.25 inch 316L steel metal plate. The bottom of the plate is heated to 200F. dt = .5s and end time is 10 seconds.
+    Simulate and process the results.
 
+# Conversions to SI units
+
+    4 x 10 x .25 inches -> 0.1016 x 0.254 x 0.00635 meters.
+    200F -> 366.4833K
+
+# Timeline
+
+## 6/27/2024:
+
+### 1:00 PM - 5:00 PM
+#### Summary
+* Researched Heat Conduction.
+* Created input file and Ran calculation.
+* Reinstalled ParaView onto Windows OS directly instead of WSL Ubuntu.
+    * This solved failure to render mesh from output file issue.
+
+#### Notes:
+* ParaView not immediately displaying results from calculations, just mesh.
+    * Need to research Viewing data and mesh in ParaView more.
+
+#### Goals/TODO:
+* Research viewing data and mesh in ParaView.
+* If ParaView not a problem with ParaView, ensure that input file is correct and calculations are running fine.
+* Copy Goal1.i input file and rewrite it for a transient execution type to meet goal requirements.
