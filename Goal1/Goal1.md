@@ -47,3 +47,12 @@ Not sure what changed, but after a lot of messing around in ParaView the meshes 
 #### Goals/TODO:
 * Run simulations in Abaqus and compare results.
 * Look into converting simulation into Python script through ParaView.
+
+### 2:45 PM - 3:40 PM
+#### Summary
+* Laptop crashed with blue screen. Had to install new update and restart a few times to get things working smoothly again.
+* Installed VMWare Horizon Client and connected to remote lab.
+
+#### Goals/TODO:
+* Begin Abaqus tutorials
+* Run simulations in Abaqus and compare results
