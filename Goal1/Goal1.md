@@ -13,6 +13,8 @@
 
 # Timeline
 
+<!--  -->
+
 ## 6/27/2024:
 
 ### 1:00 PM - 5:00 PM
@@ -29,4 +31,19 @@
 #### Goals/TODO:
 * Research viewing data and mesh in ParaView.
 * If not a problem with ParaView, ensure that input file is correct and calculations are running fine.
-* Copy Goal1.i input file and rewrite it for a transient execution type to meet goal requirements.
+* Copy Goal1Steady.i input file and rewrite it for a transient execution type to meet goal requirements.
+
+<!--  -->
+
+## 7/1/2024:
+### 12:00 PM - 2:45 PM
+#### Summary
+* ParaView now showing heat data on mesh.
+* Created Transient version of Goal1Steady.i
+
+#### Notes:
+Not sure what changed, but after a lot of messing around in ParaView the meshes now display heat correctly.
+
+#### Goals/TODO:
+* Run simulations in Abaqus and compare results.
+* Look into converting simulation into Python script through ParaView.

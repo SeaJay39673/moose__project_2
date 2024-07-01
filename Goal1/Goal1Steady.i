@@ -15,11 +15,7 @@
 []
 
 [Variables]
-    [var_x] # Defaults to First Order with Lagrange Family
-    []
-    [var_y]
-    []
-    [var_z]
+    [temp] # Defaults to First Order with Lagrange Family
     []
 []
 
@@ -32,37 +28,17 @@
 []
 
 [Kernels]
-    [hc_x]
+    [hc_temp]
         type=HeatConduction
-        variable=var_x
-    []
-    [hc_y]
-        type=HeatConduction
-        variable=var_y
-    []
-    [hc_z]
-        type=HeatConduction
-        variable=var_z
+        variable=temp
     []
 []
 
 [BCs]
-    [bottom_x]
+    [bottom_temp]
         type=DirichletBC
         boundary=bottom
-        variable=var_x
-        value=366.4833 # 200F in K
-    []
-    [bottom_y]
-        type=DirichletBC
-        boundary=bottom
-        variable=var_y
-        value=366.4833 # 200F in K
-    []
-    [bottom_z]
-        type=DirichletBC
-        boundary=bottom
-        variable=var_z
+        variable=temp
         value=366.4833 # 200F in K
     []
 []
