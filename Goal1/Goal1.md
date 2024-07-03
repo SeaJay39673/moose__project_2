@@ -25,10 +25,10 @@
 As you can see in the following two images, the data is almost a perfect match. This affirms that the calculations ran in MOOSE are correct.
 
 ##### Abaqus:
-![](Steady.png)
+![](Photos/ASteady.png)
 
 ##### MOOSE:
-![](Steady-1.png)
+![](Photos/MSteady.png)
 
 #### Goals/TODO:
 
