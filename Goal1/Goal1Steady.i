@@ -43,6 +43,13 @@
     []
 []
 
+[Postprocessors]
+    [temp]
+        type=ElementAverageValue
+        variable=temp
+    []
+[]
+
 [Executioner]
     type=Steady
     solve_type=NEWTON

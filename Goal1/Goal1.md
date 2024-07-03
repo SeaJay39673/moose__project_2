@@ -15,23 +15,36 @@
 
 <!--  -->
 
-## 6/27/2024:
-
-### 1:00 PM - 5:00 PM
+## 7/3/2024:
+### 12:00 PM - 4:00 PM
 #### Summary
-* Researched Heat Conduction.
-* Created input file and Ran calculation.
-* Reinstalled ParaView onto Windows OS directly instead of WSL Ubuntu.
-    * This solved failure to render mesh from output file issue.
+* Abaqus simulation for steady execution complete
+* Results processed and compared between MOOSE and Abaqus
 
-#### Notes:
-* ParaView not immediately displaying results from calculations, just mesh.
-    * Need to research Viewing data and mesh in ParaView more.
+#### Results:
+As you can see in the following two images, the data is almost a perfect match. This affirms that the calculations ran in MOOSE are correct.
+
+##### Abaqus:
+![](Steady.png)
+
+##### MOOSE:
+![](Steady-1.png)
 
 #### Goals/TODO:
-* Research viewing data and mesh in ParaView.
-* If not a problem with ParaView, ensure that input file is correct and calculations are running fine.
-* Copy Goal1Steady.i input file and rewrite it for a transient execution type to meet goal requirements.
+
+* Run Goal1 transient execution in Abaqus
+* Compare results with moose
+
+<!--  -->
+
+## 7/2/2024:
+### 1:00 PM - 3:00 PM
+#### Summary
+* Abaqus Tutorial
+
+#### Goals/TODO:
+* Finish Abaqus Tutorial
+* Run simulations in Abaqus and compare results
 
 <!--  -->
 
@@ -56,3 +69,23 @@ Not sure what changed, but after a lot of messing around in ParaView the meshes 
 #### Goals/TODO:
 * Begin Abaqus tutorials
 * Run simulations in Abaqus and compare results
+
+<!--  -->
+
+## 6/27/2024:
+
+### 1:00 PM - 5:00 PM
+#### Summary
+* Researched Heat Conduction.
+* Created input file and Ran calculation.
+* Reinstalled ParaView onto Windows OS directly instead of WSL Ubuntu.
+    * This solved failure to render mesh from output file issue.
+
+#### Notes:
+* ParaView not immediately displaying results from calculations, just mesh.
+    * Need to research Viewing data and mesh in ParaView more.
+
+#### Goals/TODO:
+* Research viewing data and mesh in ParaView.
+* If not a problem with ParaView, ensure that input file is correct and calculations are running fine.
+* Copy Goal1Steady.i input file and rewrite it for a transient execution type to meet goal requirements.

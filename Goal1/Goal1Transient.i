@@ -27,7 +27,7 @@
     []
     [density]
         type=Density
-        density=8.0
+        density=8000.0
     []
 []
 
