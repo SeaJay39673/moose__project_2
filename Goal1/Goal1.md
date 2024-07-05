@@ -15,6 +15,17 @@
 
 <!--  -->
 
+## 7/5/2024
+### 12:00PM - 2:10PM
+#### Summary
+* Abaqus simulation for transient execution complete
+#### Goals/TODO:
+* Analyze outputs from MOOSE transient execution and compare to Abaqus
+* Finish PostHelper.py to aid with postprocessing section for input file.
+
+
+<!--  -->
+
 ## 7/3/2024:
 ### 12:00 PM - 4:00 PM
 #### Summary

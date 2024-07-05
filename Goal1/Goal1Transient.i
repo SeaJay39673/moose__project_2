@@ -51,6 +51,13 @@
     []
 []
 
+[Postprocessors]
+    [temp]
+        type=ElementAverageValue
+        variable=temp
+    []
+[]
+
 [Executioner]
     type=Transient
     #Preconditioned JFNK (default)
@@ -73,4 +80,5 @@
 
 [Outputs]
     exodus=true
+    csv=true
 []
