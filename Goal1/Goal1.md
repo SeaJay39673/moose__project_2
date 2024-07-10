@@ -15,6 +15,30 @@
 
 <!--  -->
 
+## 7/9/2024
+### 8:00 AM - 9:15 AM
+#### Summary
+* Created script to help with choosing postprocessor coordinates based on mesh
+
+### 2:00 PM - 7:00 PM
+#### Summary
+* Converted data from Abaqus to CSV. 
+* Created script to sanitize redundant time step values in Abaqus CSV data
+* Created script to compare values between MOOSE CSV and Abaqus CSV
+
+#### Challenges
+* No clear way to compare data, as node data across time steps aren't sorted.
+
+#### Potential Solutions
+* Modify compare script to display max and min for each simulation across each time step, if these values are close to each other then calculations are correct?
+
+#### Goals/TODO:
+* Reach out to research peers/professor and ask for guidance on comparing result data.
+* Finish Script on comparing data
+* Analyze compared data, decide whether or not simulations are successful
+
+<!--  -->
+
 ## 7/5/2024
 ### 12:00PM - 2:10PM
 #### Summary
