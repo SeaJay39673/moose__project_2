@@ -21,26 +21,19 @@ def getData(file): # returns Times and Data ordered time step
     data = transpose(data)
     times = data[0]
     data = data[1:] # Remove times from data
-    return [times, transpose(data.tolist())]
+    return [times, data.tolist()] # [times, transpose(data.tolist())]
 
 # Get data and sort
 [Times, f1Data] = getData(File1)
 [Times, f2Data] = getData(File2) # Times should be the same, so value gets overridden
 
-avg = lambda arr: sum([float(val) for val in arr])/len(arr)
-diff = lambda val1, val2: abs(avg(val1) - avg(val2))
-getMins = lambda arr1, arr2: [float(min(arr1.tolist())), float(min(arr2.tolist()))]
-getMaxs = lambda arr1, arr2: [float(max(arr1.tolist())), float(max(arr2.tolist()))]
+pool = f2Data.copy()
+compDict = {}
+tol = 1
 
-outFileName = "ComparedResults.csv"
-of = open(outFileName, "w")
-outStr = "Time Step,Average value across all nodes,Extreme Minimum Difference, Extreme Maximum Difference\n"
+def comp(col1, col2):
+    for i in range(len(col1)):
+        if abs(float(col1[i]) - float(col2[i])) > tol:
+            return False
+    return True
 
-for i in range(len(Times)):
-    outStr += Times[i] + "," + str(diff(f1Data[i].tolist(),f2Data[i].tolist()))
-    [min1, min2] = getMins(f1Data[i], f2Data[i])
-    outStr += "," + str(abs(min1 - min2))
-    [max1, max2] = getMaxs(f1Data[i], f2Data[i])
-    outStr += "," + str(abs(max1 - max2)) + "\n"
-of.write(outStr)
-of.close()

@@ -15,6 +15,23 @@
 
 <!--  -->
 
+## 7/19/2024
+### 1:00 PM - 2:00 PM
+#### Summary
+* Continued working on comparing CSV data
+* Decided that an exhaustive comparison will be needed to compare the data
+
+#### Notes:
+* Exhaustive comparison consists of checking each column from one file against every column of another. 
+    The two columns that are the closest to each other are paired together as the same node across the two simulations. 
+* Once the comparisons are made, A new CSV will be generated and analyzed.
+
+### 5:00 PM - 5:30 PM
+
+#### Summary
+* Began working on the exhaustive comparison. More complicated than anticipated
+<!--  -->
+
 ## 7/9/2024
 ### 8:00 AM - 9:15 AM
 #### Summary
