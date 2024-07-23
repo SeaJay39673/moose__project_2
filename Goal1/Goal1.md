@@ -15,6 +15,32 @@
 
 <!--  -->
 
+## 7/23/2024
+### 1:30 PM - 3:25 PM
+#### Summary
+* Concluded that data discrepancies are a result of differences between simulations, not from the scripts.
+#### Notes:
+* Most data from the Abaqus simulation are close to zero. 
+* This may be a result of different methods used for the simulation.
+* Most likely caused by setting up the simulation or extracting postprocessed results differently.
+#### Goals/TODO:
+* Verify both simulations are setup correctly
+* Re-run both simulations
+* Ensure data is being properly extracted from both simulations.
+<!--  -->
+
+## 7/22/2024
+### 2:00 PM - 5:00 PM
+#### Summary:
+* Mostly complete with exhaustive comparison for data.
+* Data average differences between best match node candidates can be as high as around 70 degrees.
+#### Notes:
+* Data average differences could be high due to oversight in script. Need to Check that everything is working as intended
+#### Goals/TODO:
+* Look through compare script to ensure data is being compared correctly.
+
+<!--  -->
+
 ## 7/19/2024
 ### 1:00 PM - 2:00 PM
 #### Summary

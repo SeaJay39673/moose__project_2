@@ -27,13 +27,72 @@ def getData(file): # returns Times and Data ordered time step
 [Times, f1Data] = getData(File1)
 [Times, f2Data] = getData(File2) # Times should be the same, so value gets overridden
 
-pool = f2Data.copy()
+# A pool of all the "Candidates" to compare against f1Data
+pool = [[float(val) for val in col] for col in f2Data]
+
+# Dictionary of all the data
 compDict = {}
-tol = 1
 
+
+# Compare two columns, get average difference, as well as the difference across each element.
 def comp(col1, col2):
-    for i in range(len(col1)):
-        if abs(float(col1[i]) - float(col2[i])) > tol:
-            return False
-    return True
+    col1 = [float(val) for val in col1]
+    col2 = [float(val) for val in col2]
+    def getAvgDiff(col1, col2):
+        avg1 = sum(col1)/len(col1)
+        avg2 = sum(col2)/len(col2)
+        return abs(avg1 - avg2)
+    def getDiffs(col1, col2):
+        diffs = []
+        for i in range(len(col1)):
+            diffs.append(abs(col1[i] - col2[i]))
+        return diffs
+    return [getAvgDiff(col1,col2), getDiffs(col1,col2), col2]
 
+# Evaluate the comparison. If average difference is less than previous, replace in the dictionary.
+def evalComp(compRes, i, j):
+    avgDiff = compRes[0]
+    diffs = compRes[1]
+    col = compRes[2]
+
+    def placeEntry():
+        compDict[i] = {
+            'avgDiff': avgDiff,
+            'diffs': diffs,
+            'colInd': j,
+            'col': col
+        }
+    if i not in compDict.keys():
+        placeEntry()
+    
+    elif compDict[i]['avgDiff'] > avgDiff:
+        placeEntry()
+
+# Sort f1Data by Max value in each column. 
+# This is so that data will be sorted when placed in spreadsheet
+f1Data.sort(key = lambda col: max([float(val) for val in col]))
+
+# Compare every column in f1Data to every Column in f2Data. Look for most likely column match.
+for i in range(len(f1Data)):
+    for j in range(len(pool)):
+        evalComp(comp(f1Data[i], pool[j]), i, j)
+    # Once all comparisons have been made for a single column in f1Data, then a match must have been found by now. 
+    # Remove the match from the pool to prevent duplicate matches
+    # break
+    del pool[compDict[i]['colInd']]
+
+newFName = "ComparedResults.csv"
+
+outStr = ",Time," + ",".join(Times) + "\n"
+
+for i in compDict:
+    outStr += "Dat1-C%i,%s\n" %(i, ",".join(["%5.10f" %float(val) for val in f1Data[i]]))
+    dat2 = [float(val) for val in compDict[i]['col']]
+    outStr += "Dat2-C%i,%s\n" %(i, ",".join(["%5.10f" % val for val in compDict[i]['col']]))
+    outStr += "Diff,%s\n" %(",".join(["%5.10f" %val for val in compDict[i]["diffs"]]))
+    outStr += "Avg Diff,%f\n\n" %(compDict[i]["avgDiff"])
+
+
+newF = open(newFName, "w")
+newF.write(outStr)
+newF.close()
