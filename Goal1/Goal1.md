@@ -15,6 +15,22 @@
 
 <!--  -->
 
+## 7/24/2024
+### 10:30 AM - 2:00 PM
+#### Summary
+* After further investigation of CSV data from each simulation, it appears that the Abaqus simulation contains correct data.
+* MOOSE simulation data contains negative values (temperature below 0 Celsius) which is not found in Abaqus data whatsoever.
+* This indicates that the MOOSE data is incorrect, the simulation input file will need to be revised.
+#### Notes:
+* The incorrect data could very likely be a result of how the nodal coordinates are being calculated for the postprocessor.
+* Will need to get advice from another research peer or professor. 
+
+#### Goals/TODO:
+* Reach out to peer or professor for help in getting correct data from MOOSE simulation
+* May need second opinion to verify that input file is correct.
+
+<!--  -->
+
 ## 7/23/2024
 ### 1:30 PM - 3:25 PM
 #### Summary

@@ -11,8 +11,8 @@
 from numpy import transpose
 
 # File names for data to be compared
-File1 = "Goal1Transient_out.csv"
-File2 = "Project2_Goal1Transient_Abaqus_Sanitized.csv"
+File1 = "./OutputData/Goal1Transient_out.csv"
+File2 = "./OutputData/Project2_Goal1Transient_Abaqus_Sanitized.csv"
 
 def getData(file): # returns Times and Data ordered time step
     f = open(file)
@@ -81,7 +81,7 @@ for i in range(len(f1Data)):
     # break
     del pool[compDict[i]['colInd']]
 
-newFName = "ComparedResults.csv"
+newFName = "./OutputData/ComparedResults.csv"
 
 outStr = ",Time," + ",".join(Times) + "\n"
 
