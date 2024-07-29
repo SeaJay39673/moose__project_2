@@ -15,6 +15,20 @@
 
 <!--  -->
 
+## 7/26/2024
+### 12:00 PM - 1:00 PM
+#### Summary:
+* Still unsure as to what is causing the discrepancy between MOOSE and Abaqus data
+#### Notes:
+* Unsure of what's causing the MOOSE data to contain negatives.
+* Could be that it is caused by the need for an initial condition over the entire mesh to be set to 0.
+
+### 1:00 PM - 1:30 PM
+* Continued working on problems.
+* Laptop Crashed and would not turn on. Had to end work for the day
+
+<!--  -->
+
 ## 7/24/2024
 ### 10:30 AM - 2:00 PM
 #### Summary
